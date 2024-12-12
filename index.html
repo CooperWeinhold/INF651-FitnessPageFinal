@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tracker - Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Fitness Tracker</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="food-entry.html">Food Entry</a></li>
+          <li class="nav-item"><a class="nav-link" href="daily-summary.html">Daily Summary</a></li>
+          <li class="nav-item"><a class="nav-link" href="info.html">More Information</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white text-center py-5 mb-4">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Welcome to Fitness Tracker</h1>
+      <p class="lead">Your ultimate tool for tracking calories, macros, and fitness goals!</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- About Section -->
+    <section class="mb-5">
+      <h2 class="text-center mb-4">About Fitness Tracker</h2>
+      <p class="text-muted text-center">
+        Fitness Tracker helps you log your daily food intake, track your calories and macros, and monitor your progress toward your fitness goals. Whether you're trying to lose weight, gain muscle, or maintain a healthy lifestyle, this tool provides all the insights you need to stay on track.
+      </p>
+    </section>
+  
+    <!-- Navigation Section -->
+    <section class="mb-5">
+      <h2 class="text-center mb-4">Explore the Application</h2>
+      <div class="row g-4">
+        <!-- Food Entry -->
+        <div class="col-md-4">
+          <div class="card shadow-lg border-0 h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Food Entry</h5>
+              <p class="card-text text-muted">Log the meals you eat and record calorie and macro information.</p>
+              <a href="food-entry.html" class="btn btn-primary w-100 py-2">Go to Food Entry</a>
+            </div>
+          </div>
+        </div>
+        <!-- Daily Summary -->
+        <div class="col-md-4">
+          <div class="card shadow-lg border-0 h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Daily Summary</h5>
+              <p class="card-text text-muted">View your daily calorie and macro progress compared to your goals.</p>
+              <a href="daily-summary.html" class="btn btn-success w-100 py-2">Go to Daily Summary</a>
+            </div>
+          </div>
+        </div>
+        <!-- History -->
+        <div class="col-md-4">
+          <div class="card shadow-lg border-0 h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">History</h5>
+              <p class="card-text text-muted">Review and edit all your previously logged meals in one place.</p>
+              <a href="history.html" class="btn btn-warning w-100 py-2">Go to History</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- User Input Section -->
+    <div class="card shadow p-4 mb-5" id="name-input-section">
+      <h2 class="text-center">Enter Your Information</h2>
+      <form id="user-info-form">
+        <div class="mb-3">
+          <label for="first-name" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="first-name" placeholder="Enter your first name" required>
+        </div>
+        <div class="mb-3">
+          <label for="last-name" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="last-name" placeholder="Enter your last name" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </form>
+    </div>
+
+    <div class="card shadow p-4 mb-5" id="bmr-input-section" style="display: none;">
+      <h2 class="text-center">Calculate Your BMR and TDEE</h2>
+      <form id="bmr-form">
+        <div class="mb-3">
+          <label for="age" class="form-label">Age</label>
+          <input type="number" class="form-control" id="age" placeholder="Enter your age" required>
+        </div>
+        <div class="mb-3">
+          <label for="weight" class="form-label">Weight (lbs)</label>
+          <input type="number" class="form-control" id="weight" placeholder="Enter your weight in pounds" required>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="height-feet" class="form-label">Height (Feet)</label>
+            <input type="number" class="form-control" id="height-feet" placeholder="Feet" required>
+          </div>
+          <div class="col-md-6">
+            <label for="height-inches" class="form-label">Height (Inches)</label>
+            <input type="number" class="form-control" id="height-inches" placeholder="Inches" required>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="activity-level" class="form-label">Activity Level</label>
+          <select class="form-select" id="activity-level" required>
+            <option value="">Select your activity level</option>
+            <option value="1.2">Sedentary (little or no exercise)</option>
+            <option value="1.375">Lightly active (light exercise/sports 1-3 days/week)</option>
+            <option value="1.55">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+            <option value="1.725">Very active (hard exercise/sports 6-7 days a week)</option>
+            <option value="1.9">Super active (very hard exercise/physical job)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Calculate</button>
+      </form>
+    </div>
+
+    <div class="card shadow p-4" id="results-section" style="display: none;">
+      <h3 class="text-center">Hello, <span id="user-name"></span>!</h3>
+      <p class="text-muted text-center">Your calculated BMR is: <strong id="bmr-result">0</strong> calories/day.</p>
+      <p class="text-muted text-center">Your estimated TDEE is: <strong id="tdee-result">0</strong> calories/day.</p>
+    </div>
+  </main>
+
+  <footer class="bg-primary text-white text-center py-3">
+    <p class="mb-0">© 2024 Fitness Tracker. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Entry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Fitness Tracker</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="daily-summary.html">Daily Summary</a></li>
+          <li class="nav-item"><a class="nav-link" href="info.html">More Information</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white text-center py-5 mb-4">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Log Your Meals</h1>
+      <p class="lead">Record your meals and track their nutritional values here!</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Meal Logging Form -->
+    <section class="mb-5">
+      <div class="card shadow-lg p-4">
+        <h2 class="text-center">Add a Meal</h2>
+        <form id="meal-form">
+          <div class="mb-3">
+            <label for="meal-name" class="form-label">Meal Name</label>
+            <input type="text" class="form-control" id="meal-name" placeholder="Enter meal name" required>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <label for="calories" class="form-label">Calories</label>
+              <input type="number" class="form-control" id="calories" placeholder="Calories" required>
+            </div>
+            <div class="col-md-3">
+              <label for="protein" class="form-label">Protein (g)</label>
+              <input type="number" class="form-control" id="protein" placeholder="Protein" required>
+            </div>
+            <div class="col-md-3">
+              <label for="carbs" class="form-label">Carbs (g)</label>
+              <input type="number" class="form-control" id="carbs" placeholder="Carbs" required>
+            </div>
+            <div class="col-md-3">
+              <label for="fats" class="form-label">Fats (g)</label>
+              <input type="number" class="form-control" id="fats" placeholder="Fats" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mt-3">Add Meal</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Logged Meals Table -->
+    <section>
+      <h2 class="text-center mb-4">Logged Meals</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Meal Name</th>
+              <th>Calories</th>
+              <th>Protein (g)</th>
+              <th>Carbs (g)</th>
+              <th>Fats (g)</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="meals-table">
+            <!-- Meals will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-primary text-white text-center py-3">
+    <p class="mb-0">© 2024 Fitness Tracker. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

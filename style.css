@@ -1,0 +1,38 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+}
+
+header {
+  background-image: linear-gradient(to right, #007bff, #0056b3);
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card .btn {
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card .btn:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
